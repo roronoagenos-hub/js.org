@@ -1,0 +1,1212 @@
+<!doctype html>
+<html lang="my">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#00110f">
+<title>SK MOBILE — Service &amp; 1-Click Center</title>
+<style>
+:root {
+  --bg: #00110f;
+  --panel: #031d1b;
+  --line: #075e4b;
+  --green: #00ff91;
+  --mint: #32ffb4;
+  --muted: #a8c4c2;
+  --gold: #ffd166;
+  --orange: #ff9f43;
+  --danger: #ff4757;
+}
+* { box-sizing: border-box; }
+html { background: var(--bg); scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: radial-gradient(ellipse at 50% -10%, #063b2c, #00110f 60%);
+  color: #f3fff9;
+  font-family: Arial, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  min-height: 100vh;
+}
+
+/* Header */
+header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 75px;
+  padding: 10px clamp(12px, 2.5vw, 28px);
+  background: linear-gradient(120deg, #001712 0%, #01281d 40%, #006d3e 48%, #00c66b 52%, #002219 60%, #001b16 100%);
+  border-bottom: 2px solid var(--green);
+  box-shadow: 0 5px 25px rgba(0, 255, 145, 0.25);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.menu { font-size: 26px; color: #eafff6; cursor: pointer; }
+.logo {
+  width: 48px;
+  height: 48px;
+  flex: 0 0 48px;
+  border: 2px solid var(--green);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-weight: 1000;
+  font-style: italic;
+  line-height: .8;
+  text-align: center;
+  color: white;
+  box-shadow: 0 0 14px rgba(0, 255, 145, 0.4);
+  cursor: pointer;
+}
+.logo small { font-size: 8px; display: block; }
+.brand {
+  font-weight: 1000;
+  font-style: italic;
+  font-size: clamp(20px, 3.8vw, 34px);
+  letter-spacing: -1.5px;
+  white-space: nowrap;
+  text-shadow: 2px 2px 0 #071c17;
+  cursor: pointer;
+}
+.brand span { color: var(--green); }
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: auto;
+}
+
+/* One Setting Header Launcher */
+.btn-onesetting-head {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 40px;
+  padding: 7px 15px;
+  border: 1.5px solid var(--gold);
+  border-radius: 12px;
+  background: linear-gradient(135deg, #785300, #2c1e00);
+  color: #fff4bf;
+  font-weight: 900;
+  font-size: 13px;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(255, 209, 102, 0.4);
+  white-space: nowrap;
+}
+.btn-onesetting-head:hover {
+  background: linear-gradient(135deg, #996a00, #3d2900);
+  color: #ffffff;
+}
+
+.view-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 40px;
+  padding: 7px 12px;
+  border: 1px solid var(--green);
+  border-radius: 12px;
+  background: linear-gradient(135deg, #004c37, #00271f);
+  color: #eafff6;
+  font-weight: 800;
+  font-size: 12px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.icon-btn {
+  background: #00241d;
+  border: 1px solid #08735b;
+  border-radius: 12px;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  font-size: 19px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+.welcome {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #087e60;
+  border-radius: 14px;
+  padding: 7px 14px;
+  font-size: 12.5px;
+  color: #d7fff0;
+  background: #00291fbb;
+}
+.clock {
+  text-align: center;
+  min-width: 80px;
+  font-size: 11px;
+  color: #c0d3ce;
+}
+.clock b { display: block; font-size: 17px; color: var(--green); }
+
+/* Main Content */
+main {
+  width: 100%;
+  max-width: 1650px;
+  margin: auto;
+  padding: 14px clamp(10px, 2vw, 24px) 26px;
+}
+
+.hero {
+  height: clamp(110px, 15vw, 210px);
+  border: 1.5px solid #00b982;
+  border-radius: 18px;
+  overflow: hidden;
+  background-image: linear-gradient(90deg, #001a15f0, #001a1533, #001a15f0),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='400' viewBox='0 0 800 400'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23063b2c'/%3E%3Cstop offset='50%25' stop-color='%23001712'/%3E%3Cstop offset='100%25' stop-color='%2300ff91' stop-opacity='0.25'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='400' fill='url(%23g)'/%3E%3Ccircle cx='700' cy='200' r='180' fill='%2300ff91' fill-opacity='0.08'/%3E%3Cpath d='M0,220 Q200,120 400,220 T800,220 L800,400 L0,400 Z' fill='%2300ff91' fill-opacity='0.09'/%3E%3Ctext x='40' y='170' fill='%2300ff91' font-family='sans-serif' font-weight='900' font-size='42'%3ESK MOBILE%3C/text%3E%3Ctext x='40' y='215' fill='%23ffd166' font-family='sans-serif' font-weight='700' font-size='18'%3EVerified 1-Click APKs &amp; Direct Android Settings Launcher%3C/text%3E%3C/svg%3E");
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 0 20px rgba(0, 255, 145, 0.15);
+  margin-bottom: 14px;
+}
+
+.searchrow {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 200px;
+  gap: 10px;
+  margin: 12px 0;
+}
+.searchbox, .filter {
+  border: 1px solid var(--green);
+  border-radius: 14px;
+  background: #03241f;
+  color: white;
+  min-height: 48px;
+}
+.searchbox {
+  width: 100%;
+  padding: 12px 18px;
+  font: inherit;
+  outline: none;
+  font-size: 15px;
+}
+.searchbox:focus { box-shadow: 0 0 14px var(--green); }
+.filter { padding: 10px 14px; font-size: 14px; }
+
+/* Store Navigation Tabs */
+.store-tabs {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  white-space: nowrap;
+  scrollbar-width: none;
+  padding: 4px 1px 12px;
+  margin: 4px 0 10px;
+  -webkit-overflow-scrolling: touch;
+}
+.store-tabs::-webkit-scrollbar { display: none; }
+.store-tab {
+  flex: 0 0 auto;
+  border: 1px solid #165b49;
+  border-radius: 24px;
+  background: #06231d;
+  color: #e8f2ee;
+  padding: 10px 18px;
+  min-height: 42px;
+  font-weight: 700;
+  font-size: 13.5px;
+  cursor: pointer;
+}
+.store-tab.active {
+  background: var(--green);
+  color: #021c15;
+  border-color: var(--green);
+  box-shadow: 0 0 14px rgba(0, 255, 145, 0.4);
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 9px;
+  font-size: 18px;
+  font-weight: 800;
+  margin: 16px 2px 12px;
+  color: var(--gold);
+}
+.section-title span { display: inline-flex; align-items: center; gap: 8px; }
+.view-all {
+  background: none;
+  border: 0;
+  color: var(--green);
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* Grid & Items */
+.items {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 13px;
+}
+.item {
+  position: relative;
+  min-width: 0;
+  background: linear-gradient(135deg, #06322d, #001b1d);
+  border: 1px solid #0b8876;
+  border-radius: 16px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 8px;
+  box-shadow: inset 0 0 14px rgba(0, 255, 145, 0.08);
+  transition: transform .15s ease, border-color .15s ease;
+}
+.item:hover {
+  transform: translateY(-2px);
+  border-color: var(--green);
+}
+.item.pinned-item {
+  border: 2px solid var(--gold) !important;
+  box-shadow: 0 0 16px rgba(255, 209, 102, 0.3) !important;
+}
+
+.item-top {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.itemicon {
+  flex: 0 0 48px;
+  width: 48px;
+  height: 48px;
+  border-radius: 13px;
+  display: grid;
+  place-items: center;
+  background: #031b17;
+  border: 1px solid #0b6851;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+.itemicon svg {
+  width: 34px;
+  height: 34px;
+  display: block;
+}
+
+.iteminfo { min-width: 0; flex: 1; }
+.iteminfo strong {
+  display: block;
+  overflow-wrap: anywhere;
+  font-size: 14px;
+  color: #fff;
+}
+.tag {
+  display: inline-block;
+  font-size: 10px;
+  background: #076f57;
+  color: #c4fff2;
+  border-radius: 10px;
+  padding: 2px 7px;
+  margin: 3px 0;
+  font-weight: 700;
+}
+.featured-badge {
+  display: inline-block;
+  font-size: 9px;
+  font-weight: 900;
+  background: linear-gradient(90deg, #ffd166, #ff9f43);
+  color: #241500;
+  padding: 2px 6px;
+  border-radius: 8px;
+  margin-left: 4px;
+}
+.iteminfo p {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 11.5px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: 1.35;
+}
+
+.itemactions {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-top: 6px;
+  width: 100%;
+}
+.itemactions a, .itemactions button {
+  flex: 1;
+  min-width: 90px;
+  font-size: 11.5px;
+  text-align: center;
+  text-decoration: none;
+  color: #eafff7;
+  border: 1px solid #08735b;
+  padding: 8px 6px;
+  border-radius: 9px;
+  background: #05241d;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.itemactions a.btn-dl {
+  background: linear-gradient(90deg, #00ec98, #00c67f);
+  color: #002419;
+  border: 0;
+  font-weight: 900;
+  box-shadow: 0 2px 10px rgba(0, 236, 152, 0.3);
+}
+.itemactions a.btn-dl:hover { background: #32ffb4; }
+.itemactions a.btn-market {
+  background: #0b3a30;
+  color: #c0fff0;
+  border: 1px solid #00f5a0;
+}
+.itemactions a.btn-onesetting-card {
+  background: linear-gradient(90deg, #ffd166, #ff9f43);
+  color: #241500;
+  border: 0;
+  font-weight: 900;
+}
+
+/* One Setting Launcher Modal */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 10, 8, 0.88);
+  backdrop-filter: blur(6px);
+  display: none;
+  place-items: center;
+  z-index: 999;
+  padding: 16px;
+}
+.modal-overlay.active { display: grid; }
+.modal-card {
+  width: 100%;
+  max-width: 480px;
+  background: #03201a;
+  border: 2px solid var(--green);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 0 35px rgba(0, 255, 145, 0.35);
+}
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+.modal-header h3 {
+  margin: 0;
+  font-size: 19px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.modal-close {
+  background: none;
+  border: 0;
+  color: #a6c2bb;
+  font-size: 24px;
+  cursor: pointer;
+}
+.settings-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin: 14px 0;
+}
+.btn-launch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 14px 8px;
+  border: 1px solid #0c6a54;
+  border-radius: 14px;
+  background: #063127;
+  color: #f0fdf7;
+  font-weight: 700;
+  font-size: 12.5px;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+}
+.btn-launch span.icon { font-size: 24px; }
+.btn-launch.main-setting {
+  grid-column: 1 / -1;
+  background: linear-gradient(135deg, #00b875, #006d45);
+  border-color: #00ff9d;
+  color: #ffffff;
+  font-size: 14.5px;
+  padding: 16px;
+  box-shadow: 0 0 16px rgba(0, 255, 145, 0.35);
+}
+.settings-note {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.45;
+  margin-top: 10px;
+  text-align: center;
+  border-top: 1px solid #075e4b;
+  padding-top: 10px;
+}
+
+/* Admin Panel */
+.admin {
+  margin-top: 22px;
+  border: 1.5px solid var(--green);
+  border-radius: 18px;
+  padding: 16px;
+  background: linear-gradient(100deg, #03291f, #041411);
+  box-shadow: 0 0 16px rgba(0, 255, 145, 0.12);
+}
+.adminhead {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.admingear {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: #064332;
+  color: var(--green);
+  font-size: 24px;
+  display: grid;
+  place-items: center;
+}
+.admin-title { flex: 1; }
+.admin-title strong { color: var(--green); font-size: 18px; display: block; }
+.admin-title small { color: var(--muted); font-size: 12px; }
+.admin-toggle {
+  border: 1px solid #00c985;
+  border-radius: 12px;
+  background: #063b2e;
+  color: #eafff7;
+  font-weight: 800;
+  padding: 9px 14px;
+  cursor: pointer;
+}
+.admin-content {
+  border-top: 1px solid #075e4b;
+  margin-top: 12px;
+  padding-top: 14px;
+}
+.loginrow {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  gap: 10px;
+  align-items: center;
+}
+input, textarea, select {
+  width: 100%;
+  padding: 11px 14px;
+  border: 1px solid #08745c;
+  background: #031510;
+  color: #f2fff9;
+  border-radius: 10px;
+  font: inherit;
+  outline: none;
+}
+input:focus, textarea:focus, select:focus { border-color: var(--green); }
+.pill {
+  border: 0;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #00e69a, #00c985);
+  color: #03251c;
+  font-weight: 900;
+  padding: 10px 18px;
+  cursor: pointer;
+}
+.admininside { margin-top: 12px; }
+.hidden { display: none !important; }
+.admininside label {
+  display: block;
+  margin: 10px 0 4px;
+  font-size: 12px;
+  color: #b9d9ce;
+  font-weight: 700;
+}
+.admin-manage-tools {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 180px;
+  gap: 8px;
+  margin: 8px 0;
+}
+.entryadmin {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  padding: 10px;
+  margin-top: 8px;
+  background: #031b16;
+  border: 1px solid #075e4b;
+  border-radius: 10px;
+}
+.entryadmin strong { flex: 1 1 100%; font-size: 13px; color: #fff; }
+.entryadmin button {
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid #087e60;
+  background: #07382c;
+  color: #eafff7;
+  font-size: 11px;
+  cursor: pointer;
+}
+.entryadmin button.del {
+  border-color: #7f1d1d;
+  color: #fca5a5;
+  background: #380f0f;
+}
+
+/* Toast Message */
+.toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #042b22;
+  border: 1.5px solid var(--green);
+  border-radius: 12px;
+  padding: 12px 18px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 13px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.6);
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all .25s ease;
+  z-index: 1000;
+}
+.toast.show { transform: translateY(0); opacity: 1; }
+
+/* PC & Mobile Switches */
+body.pc-view { min-width: 1100px; overflow-x: auto; }
+body.pc-view .items { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+body.mobile-view {
+  max-width: 480px;
+  margin: 0 auto;
+  border-left: 1px solid var(--line);
+  border-right: 1px solid var(--line);
+}
+body.mobile-view .welcome, body.mobile-view .clock { display: none; }
+body.mobile-view .items { grid-template-columns: 1fr; }
+body.mobile-view .searchrow { grid-template-columns: minmax(0, 1fr) 115px; }
+
+/* Media Queries */
+@media (max-width: 1100px) {
+  .items { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .welcome { display: none; }
+}
+@media (max-width: 768px) {
+  header { padding: 8px 10px; }
+  .menu { display: none; }
+  .brand { font-size: 21px; }
+  .clock { display: none; }
+  .btn-onesetting-head span.txt { display: none; }
+  .searchrow { grid-template-columns: minmax(0, 1fr) 115px; }
+  .items { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+  .loginrow { grid-template-columns: 1fr; }
+  .admin-manage-tools { grid-template-columns: 1fr; }
+}
+@media (max-width: 420px) {
+  .items { grid-template-columns: 1fr; }
+  .hero { height: 115px; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="menu" aria-hidden="true">☰</div>
+  <div class="logo" onclick="resetFilters()">SK<small>MOBILE</small></div>
+  <div class="brand" onclick="resetFilters()"><span>SK</span> MOBILE</div>
+
+  <div class="header-actions">
+    <!-- One Setting Multi-intent Fallback Anchor -->
+    <a href="intent:#Intent;action=android.settings.SETTINGS;end" 
+       class="btn-onesetting-head" 
+       id="headOneSettingBtn" 
+       title="1-Click Open Phone Settings">
+      ⚙ <span class="txt">One Setting</span>
+    </a>
+    <button type="button" id="openModalBtn" class="icon-btn" title="Sub-Settings (Wi-Fi, Apps, Dev, FRP)" aria-label="Settings Menu">▦</button>
+    <button type="button" id="viewToggle" class="view-toggle" title="Switch layout">🖥 PC View</button>
+    <button type="button" id="focusSearch" class="icon-btn" aria-label="Search">⌕</button>
+    <button type="button" id="notifyBtn" class="icon-btn" aria-label="Notifications">♧</button>
+    <div class="welcome">📱 <span>Welcome to SK MOBILE</span></div>
+    <div class="clock" id="clock"><b>--:--</b><small>-- --- ----</small></div>
+  </div>
+</header>
+
+<main>
+  <div class="hero" role="img" aria-label="SK MOBILE phone service banner"></div>
+
+  <div class="searchrow">
+    <input id="globalSearch" class="searchbox" placeholder="⌕  Search website / APK / tool / setting..." autocomplete="off">
+    <select id="filter" class="filter" aria-label="Category filter">
+      <option value="ALL">All Categories</option>
+      <option value="TOOL">TOOL</option>
+      <option value="APPLICATION">APPLICATION</option>
+      <option value="GAME">GAME</option>
+      <option value="WEBSITE">WEBSITE</option>
+      <option value="CEIR">CEIR</option>
+    </select>
+  </div>
+
+  <nav class="store-tabs" aria-label="Browse categories">
+    <button type="button" class="store-tab active" data-store-cat="ALL">▦ All</button>
+    <button type="button" class="store-tab" data-store-cat="TOOL">⚙ Tool</button>
+    <button type="button" class="store-tab" data-store-cat="APPLICATION">◇ Application</button>
+    <button type="button" class="store-tab" data-store-cat="GAME">🎮 Game</button>
+    <button type="button" class="store-tab" data-store-cat="WEBSITE">◎ Website</button>
+    <button type="button" class="store-tab" data-store-cat="CEIR">◈ CEIR</button>
+  </nav>
+
+  <div class="section-title">
+    <span>🔥 Verified Direct APKs &amp; Tools</span>
+    <button type="button" id="viewAllItems" class="view-all">View All →</button>
+  </div>
+
+  <div class="items" id="items"></div>
+
+  <!-- Admin Panel Section -->
+  <section class="admin">
+    <div class="adminhead">
+      <span class="admingear" aria-hidden="true">⚙</span>
+      <div class="admin-title">
+        <strong>Admin Panel</strong>
+        <small>Manage direct download links, apps &amp; websites</small>
+      </div>
+      <button type="button" id="adminToggle" class="admin-toggle" aria-expanded="false">🔐 Open Admin</button>
+    </div>
+
+    <div id="adminContent" class="admin-content hidden">
+      <div id="loginArea" class="loginrow">
+        <input id="username" autocomplete="username" placeholder="♙  Username (admin)">
+        <input id="password" type="password" autocomplete="current-password" placeholder="🔒  Password (sankokoaung)">
+        <button id="login" class="pill">Login →</button>
+      </div>
+
+      <div id="adminArea" class="admininside hidden">
+        <div style="font-size:12px;color:#a8c4c2;margin-bottom:8px">ADMIN MODE — Manage links, categories and pin items.</div>
+        <label>Category / အမျိုးအစား</label>
+        <select id="itemCat">
+          <option value="TOOL">TOOL</option>
+          <option value="APPLICATION">APPLICATION</option>
+          <option value="GAME">GAME</option>
+          <option value="WEBSITE">WEBSITE</option>
+          <option value="CEIR">CEIR</option>
+        </select>
+        <label>Item Name</label><input id="itemName" placeholder="Item name">
+        <label>Description</label><textarea id="itemDesc" rows="2" placeholder="Short description"></textarea>
+        <label>Website URL</label><input id="itemUrl" placeholder="https://...">
+        <label>Direct Download / Direct APK URL</label><input id="itemDownload" placeholder="https://...">
+        <div style="display:flex;gap:8px;margin-top:12px">
+          <button id="saveItem" class="pill">Add Item</button>
+          <button id="logout" type="button" style="border:1px solid #087e60;background:#05241d;color:#fff;border-radius:10px;padding:8px 14px;cursor:pointer">Logout</button>
+        </div>
+
+        <label style="margin-top:14px">Manage &amp; Search Links</label>
+        <div class="admin-manage-tools">
+          <input id="adminSearch" placeholder="နာမည် / URL ရှာရန်...">
+          <select id="adminFilter">
+            <option value="ALL">အမျိုးအစားအားလုံး</option>
+            <option value="TOOL">TOOL</option>
+            <option value="APPLICATION">APPLICATION</option>
+            <option value="GAME">GAME</option>
+            <option value="WEBSITE">WEBSITE</option>
+            <option value="CEIR">CEIR</option>
+          </select>
+        </div>
+        <div id="adminItems"></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- One Setting Modal with Multi-Intent Support -->
+<div class="modal-overlay" id="settingModal">
+  <div class="modal-card">
+    <div class="modal-header">
+      <h3>⚙ One Setting Direct Launcher</h3>
+      <button type="button" class="modal-close" id="closeSettingModal">✕</button>
+    </div>
+    <p style="font-size:12.5px;color:#a8c4c2;margin-bottom:10px">Android ဖုန်း Settings နှင့် လိုအပ်သော Sub-settings များကို တိုက်ရိုက်ဖွင့်ပါ:</p>
+    
+    <div class="settings-grid">
+      <!-- Direct Native Android Settings Intent Link -->
+      <a href="intent:#Intent;action=android.settings.SETTINGS;end" class="btn-launch main-setting" onclick="handleIntentClick(event, 'android.settings.SETTINGS')">
+        <span class="icon">⚙</span>
+        <span>Open Phone Settings (ပင်မ Settings ဖွင့်ရန်)</span>
+      </a>
+
+      <!-- Wi-Fi Settings Intent -->
+      <a href="intent:#Intent;action=android.settings.WIFI_SETTINGS;end" class="btn-launch" onclick="handleIntentClick(event, 'android.settings.WIFI_SETTINGS')">
+        <span class="icon">📶</span>
+        <span>Wi-Fi Settings</span>
+      </a>
+
+      <!-- Security / Screen Lock Intent -->
+      <a href="intent:#Intent;action=android.settings.SECURITY_SETTINGS;end" class="btn-launch" onclick="handleIntentClick(event, 'android.settings.SECURITY_SETTINGS')">
+        <span class="icon">🔒</span>
+        <span>Security &amp; Lock</span>
+      </a>
+
+      <!-- Developer Options Intent -->
+      <a href="intent:#Intent;action=android.settings.APPLICATION_DEVELOPMENT_SETTINGS;end" class="btn-launch" onclick="handleIntentClick(event, 'android.settings.APPLICATION_DEVELOPMENT_SETTINGS')">
+        <span class="icon">🛠</span>
+        <span>Developer Options</span>
+      </a>
+
+      <!-- App Management Intent -->
+      <a href="intent:#Intent;action=android.settings.APPLICATION_SETTINGS;end" class="btn-launch" onclick="handleIntentClick(event, 'android.settings.APPLICATION_SETTINGS')">
+        <span class="icon">📱</span>
+        <span>Apps / App Manager</span>
+      </a>
+    </div>
+
+    <div class="settings-note">
+      💡 Android Chrome သို့မဟုတ် ဖုန်း Browser ဖြင့် နှိပ်လိုက်ပါက Settings App ထဲသို့ တိုက်ရိုက်ရောက်ပါမည်။
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toastMsg"></div>
+
+<script>
+(function(){
+'use strict';
+
+const KEY='skmobile_items_v3';
+const HIDDEN_KEY='skmobile_hidden_items_v3';
+const PIN_KEY='skmobile_pinned_items_v3';
+const VIEW_KEY='skmobile_layout_view_v1';
+
+let items=[]; let hiddenItems=[]; let pinnedItems=[]; let showAll=false; let editingName='';
+const $=id=>document.getElementById(id);
+
+function showToast(msg){
+  const t=$('toastMsg');
+  t.textContent=msg;
+  t.classList.add('show');
+  setTimeout(()=>t.classList.remove('show'),2800);
+}
+
+function setLayoutView(mode){
+  const chosen=(mode==='pc'||mode==='mobile')?mode:'auto';
+  document.body.classList.toggle('pc-view',chosen==='pc');
+  document.body.classList.toggle('mobile-view',chosen==='mobile');
+  const b=$('viewToggle');
+  if(b){
+    const pc=chosen==='pc';
+    b.textContent=pc?'📱 Mobile View':'🖥 PC View';
+    b.setAttribute('aria-pressed',String(pc));
+  }
+  try{if(chosen==='auto')localStorage.removeItem(VIEW_KEY);else localStorage.setItem(VIEW_KEY,chosen)}catch(e){}
+}
+try{const savedView=localStorage.getItem(VIEW_KEY);if(savedView==='pc'||savedView==='mobile')setLayoutView(savedView)}catch(e){}
+
+try{items=JSON.parse(localStorage.getItem(KEY)||'[]');if(!Array.isArray(items))items=[]}catch(e){items=[]}
+try{hiddenItems=JSON.parse(localStorage.getItem(HIDDEN_KEY)||'[]');if(!Array.isArray(hiddenItems))hiddenItems=[]}catch(e){hiddenItems=[]}
+try{pinnedItems=JSON.parse(localStorage.getItem(PIN_KEY)||'[]');if(!Array.isArray(pinnedItems))pinnedItems=[]}catch(e){pinnedItems=[]}
+
+/* High-Quality Original Brand SVGs */
+const SVG_ICONS = {
+  // Zapya Original: Red-Orange Circle with Sharp Lightning 'Z'
+  'Zapya': `<svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="23" fill="#ff4d00"/><path d="M12 15h21l-14 14h13l-18 10 4-11h-9z" fill="#ffe600"/><path d="M14 17h17l-12 12h11l-15 8 3-9h-7z" fill="#ffffff" opacity="0.3"/></svg>`,
+
+  // MX Player: Royal Blue Rounded Box with Cyan Play Badge
+  'MX Player': `<svg viewBox="0 0 48 48"><rect width="48" height="48" rx="12" fill="#0256d0"/><path d="M17 14l18 10-18 10z" fill="#00d2ff"/><path d="M19 18l11 6-11 6z" fill="#ffffff"/></svg>`,
+
+  // Vidmate: Official Red/Orange/Pink V Badge
+  'Vidmate': `<svg viewBox="0 0 48 48"><rect width="48" height="48" rx="12" fill="#e91e63"/><path d="M12 13h9l6 14 6-14h9l-13 25h-4z" fill="#ffffff"/><path d="M14 15h6l6 13 6-13h6l-11 20h-2z" fill="#ffeb3b"/></svg>`,
+
+  // vivo EasyShare: Cyan/Blue Modern Circular Share Curve
+  'Easy Share': `<svg viewBox="0 0 48 48"><rect width="48" height="48" rx="12" fill="#00a8ea"/><circle cx="24" cy="15" r="5" fill="#fff"/><circle cx="14" cy="32" r="5" fill="#fff"/><circle cx="34" cy="32" r="5" fill="#fff"/><path d="M18 29.5l12-12m0 12l-12-12" stroke="#fff" stroke-width="3.5" stroke-linecap="round"/></svg>`,
+
+  // YouTube: Official Red Rectangle with White Play Triangle
+  'YouTube': `<svg viewBox="0 0 48 48"><rect width="48" height="48" rx="12" fill="#ff0000"/><path d="M20 16l12 8-12 8z" fill="#ffffff"/></svg>`,
+
+  // Google Chrome: Official 4-color Ring & Sphere
+  'Google Chrome': `<svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="22" fill="#ffffff"/><path d="M24 6c7.5 0 14 4.5 16.8 11H24z" fill="#ea4335"/><path d="M40.8 17A18 18 0 0132 39.5L24 24h16.8z" fill="#fbbc05"/><path d="M32 39.5A18 18 0 017.2 24L17 30l7-6z" fill="#34a853"/><circle cx="24" cy="24" r="8" fill="#ffffff"/><circle cx="24" cy="24" r="6.5" fill="#1a73e8"/></svg>`,
+
+  // WhatsApp: Emerald Green Bubble with White Handset
+  'WhatsApp': `<svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="22" fill="#25d366"/><path d="M34 29c-.5 1.5-2.5 2.8-4 3-1 .2-2.3.3-6.7-1.5-5.3-2.2-8.7-7.7-9-8-.3-.4-2.3-3.1-2.3-5.8s1.4-4.1 2-4.7c.5-.5 1.2-.8 1.8-.8.2 0 .4 0 .6.1.5.1 1.2 0 1.9 1.6.7 1.7 1.8 4.4 2 4.7.2.3.3.7.1 1.1-.2.4-.4.6-.7.9-.3.3-.6.7-.9 1-.3.3-.7.7-.3 1.4.4.7 1.8 3 4 4.9 2.7 2.4 5 3.2 5.8 3.5.7.3 1.2.3 1.6-.2.5-.6 2.1-2.4 2.6-3.3.5-.8 1-.7 1.7-.4.7.3 4.5 2.1 5.3 2.5.7.4 1.2.6 1.4.9.2.4.2 2.2-.3 3.7z" fill="#ffffff"/></svg>`,
+
+  // Discord: Blurple Clyde Controller Face
+  'Discord': `<svg viewBox="0 0 48 48"><rect width="48" height="48" rx="12" fill="#5865f2"/><path d="M35 15a20 20 0 00-6-2l-.3.6c2.3.7 3.4 1.7 3.4 1.7A23 23 0 0024 14a23 23 0 00-8.1 1.3s1.1-1 3.4-1.7l-.3-.6a20 20 0 00-6 2C8 24 10 32 10 32a21 21 0 006.5 3.3l1.4-1.9s-2.1-.6-3-1.5c.3.2 3.1 1.8 9.1 1.8s8.8-1.6 9.1-1.8c-.9.9-3 1.5-3 1.5l1.4 1.9A21 21 0 0038 32s2-8-3-17zm-16 13c-1.7 0-3-1.5-3-3.3s1.3-3.3 3-3.3 3 1.5 3 3.3-1.3 3.3-3 3.3zm10 0c-1.7 0-3-1.5-3-3.3s1.3-3.3 3-3.3 3 1.5 3 3.3-1.3 3.3-3 3.3z" fill="#ffffff"/></svg>`,
+
+  // MT Manager: Green Gold Dual Android Gear
+  'MT Manager': `<svg viewBox="0 0 48 48"><rect width="48" height="48" rx="12" fill="#1b5e20"/><circle cx="24" cy="24" r="16" fill="#2e7d32" stroke="#ffd166" stroke-width="2"/><text x="13" y="30" font-family="sans-serif" font-weight="900" font-size="16" fill="#ffd166">MT</text></svg>`,
+
+  // ChatGPT: OpenAI Teal Rosette Swirl
+  'ChatGPT': `<svg viewBox="0 0 48 48"><rect width="48" height="48" rx="12" fill="#10a37f"/><path d="M37 20a6.5 6.5 0 00-5.4-6.4 6.7 6.7 0 00-11-2.9 6.6 6.6 0 00-7.8 4.2 6.5 6.5 0 00-4 7.6 6.6 6.6 0 002.3 8.3 6.7 6.7 0 0011 2.9 6.6 6.6 0 007.8-4.2A6.5 6.5 0 0037 20zm-13 14a4.4 4.4 0 01-3-1.2l1.6-1a2.6 2.6 0 003.7-1.4l.2.8a4.4 4.4 0 01-2.5 2.8zm-7.6-3.8a4.4 4.4 0 01-.6-3.2l1.6.9a2.6 2.6 0 003.9-.2l-.6.6a4.4 4.4 0 01-4.3 1.9zm-2.4-7.8a4.4 4.4 0 012.4-2l.2 1.8a2.6 2.6 0 00.3 4l-.8-.3a4.4 4.4 0 01-2.1-3.5zm16 4.7a2.6 2.6 0 00-.3-4l.8.3a4.4 4.4 0 012.1 3.5 4.4 4.4 0 01-2.4 2l-.2-1.8zm2.4-4.8a4.4 4.4 0 01.6 3.2l-1.6-.9a2.6 2.6 0 00-3.9.2l.6-.6a4.4 4.4 0 014.3-1.9zm-8-7.7a4.4 4.4 0 013 1.2l-1.6 1a2.6 2.6 0 00-3.7 1.4l-.2-.8a4.4 4.4 0 012.5-2.8z" fill="#ffffff"/></svg>`,
+
+  // One Setting Tool: Gold/Green Gear
+  'One Setting': `<svg viewBox="0 0 48 48"><rect width="48" height="48" rx="12" fill="#d97706"/><circle cx="24" cy="24" r="8" fill="none" stroke="#ffffff" stroke-width="4"/><path d="M24 8v5m0 22v5M8 24h5m22 0h5m-7.3-11.3l-3.5 3.5m-14.4 14.4l-3.5 3.5m0-21.4l3.5 3.5m14.4 14.4l3.5 3.5" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/></svg>`,
+
+  // Default Categories
+  'TOOL': `<svg viewBox="0 0 48 48"><rect width="48" height="48" rx="12" fill="#00796b"/><path d="M31 13a7 7 0 00-8.8 8.8l-9 9 3 3 9-9A7 7 0 0034 16l-4 4-3-3 4-4z" fill="#00f5a0"/></svg>`,
+  'APPLICATION': `<svg viewBox="0 0 48 48"><rect width="48" height="48" rx="12" fill="#0277bd"/><rect x="13" y="13" width="9" height="9" rx="2" fill="#fff"/><rect x="26" y="13" width="9" height="9" rx="2" fill="#fff"/><rect x="13" y="26" width="9" height="9" rx="2" fill="#fff"/><rect x="26" y="26" width="9" height="9" rx="2" fill="#00f5a0"/></svg>`,
+  'GAME': `<svg viewBox="0 0 48 48"><rect width="48" height="48" rx="12" fill="#6a1b9a"/><path d="M14 20h20a4 4 0 014 4v6a4 4 0 01-7 2.6l-3-3.6h-8l-3 3.6a4 4 0 01-7-2.6v-6a4 4 0 014-4zm4 4v6m-3-3h6m12-1a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zm4 3a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z" stroke="#ffd166" stroke-width="2.5" fill="none" stroke-linecap="round"/></svg>`,
+  'WEBSITE': `<svg viewBox="0 0 48 48"><rect width="48" height="48" rx="12" fill="#004d40"/><circle cx="24" cy="24" r="14" fill="none" stroke="#00f5a0" stroke-width="3"/><ellipse cx="24" cy="24" rx="6" ry="14" fill="none" stroke="#00f5a0" stroke-width="2.5"/><path d="M10 24h28" stroke="#00f5a0" stroke-width="2.5"/></svg>`,
+  'CEIR': `<svg viewBox="0 0 48 48"><rect width="48" height="48" rx="12" fill="#bf360c"/><path d="M24 10l12 5v9c0 8-5 13-12 15-7-2-12-7-12-15v-9l12-5z" fill="#ffd166"/><path d="M20 23l3 3 6-6" stroke="#2b1000" stroke-width="3" fill="none" stroke-linecap="round"/></svg>`
+};
+
+function getAppSvg(name, cat){
+  for(let key in SVG_ICONS){
+    if(name.toLowerCase().includes(key.toLowerCase())) return SVG_ICONS[key];
+  }
+  return SVG_ICONS[cat] || SVG_ICONS['APPLICATION'];
+}
+
+/* Verified 1-Click APK Download Direct Endpoints */
+const demo=[
+{name:'One Setting (Phone Settings)',cat:'TOOL',desc:'Android Settings ထဲ တိုက်ရိုက် ၁ ချက်နှိပ် ဖွင့်ရန် (FRP Bypass & Technician Helper)',url:'intent:#Intent;action=android.settings.SETTINGS;end',download:''},
+{name:'Zapya File Transfer',cat:'APPLICATION',desc:'Zapya တရားဝင် မြန်နှုန်းမြင့် ဖိုင်ကူးပြောင်းရေး APK (Direct APK Download)',url:'https://play.google.com/store/apps/details?id=com.dewmobile.kuaiya.play',download:'https://d.apkpure.net/b/APK/com.dewmobile.kuaiya.play?version=latest'},
+{name:'MX Player Pro',cat:'APPLICATION',desc:'HW+ decoding ဗီဒီယို Player အစစ် (Direct APK Download)',url:'https://play.google.com/store/apps/details?id=com.mxtech.videoplayer.ad',download:'https://d.apkpure.net/b/APK/com.mxtech.videoplayer.ad?version=latest'},
+{name:'Vidmate HD Downloader',cat:'APPLICATION',desc:'Vidmate Official Direct Verified APK (အလုပ်လုပ်သော တိုက်ရိုက်ဆာဗာ)',url:'https://www.vidmateapp.com/',download:'https://www.vidmateapp.com/downloading2'},
+{name:'Easy Share (vivo)',cat:'APPLICATION',desc:'vivo တရားဝင် EasyShare Phone Clone & File Transfer (Direct APK)',url:'https://play.google.com/store/apps/details?id=com.vivo.easyshare',download:'https://d.apkpure.net/b/APK/com.vivo.easyshare?version=latest'},
+{name:'Activity Launcher',cat:'APPLICATION',desc:'ဝှက်ထားသော Settings များနှင့် Sub-menu များ တိုက်ရိုက်ဖွင့်သည့် Tool',url:'https://play.google.com/store/apps/details?id=de.szalkowski.activitylauncher',download:'https://d.apkpure.net/b/APK/de.szalkowski.activitylauncher?version=latest'},
+{name:'OPPO Clone Phone',cat:'APPLICATION',desc:'OPPO & Realme ဖုန်းဒေတာ ပြောင်းရွှေ့ Tool (Direct Download)',url:'https://play.google.com/store/apps/details?id=com.coloros.backuprestore',download:'https://d.apkpure.net/b/APK/com.coloros.backuprestore?version=latest'},
+{name:'SamFW Tool',cat:'TOOL',desc:'Samsung 1-Click FRP removal & CSC change flashing tool',url:'https://samfw.com/',download:'https://samfw.com/top/samfw-frp-tool'},
+{name:'Unlock Tool Official',cat:'TOOL',desc:'UnlockTool တရားဝင် multi-brand flashing portal',url:'https://unlocktool.net/',download:'https://unlocktool.net/download/'},
+{name:'MT Manager VIP',cat:'TOOL',desc:'Dual-panel file manager & APK editor tool',url:'https://mt2.cn/',download:'https://d.apkpure.net/b/APK/bin.mt.plus?version=latest'},
+{name:'Chrome Browser',cat:'APPLICATION',desc:'Google Chrome official browser for Android (Direct APK)',url:'https://www.google.com/chrome/',download:'https://d.apkpure.net/b/APK/com.android.chrome?version=latest'},
+{name:'ChatGPT',cat:'WEBSITE',desc:'ChatGPT AI assistant for tech troubleshooting',url:'https://chatgpt.com/',download:''},
+{name:'SK MOBILE — Lovable',cat:'WEBSITE',desc:'SK MOBILE Lovable cloud portal',url:'https://skmobile08.lovable.app/',download:''},
+{name:'Subnautica Mobile',cat:'GAME',desc:'Subnautica game APK direct download',url:'https://apkvision.org/games/adventure/subnautica-101168/',download:'https://dl.apkvision.org/subnautica/Subnautica-v1.22.83416-full-apkvision.apk'},
+{name:'Subnautica Below Zero',cat:'GAME',desc:'Subnautica Below Zero Android full edition',url:'https://apkvision.org/games/adventure/subnautica-below-zero-105151/',download:'https://dl.apkvision.org/subnautica-below-zero/Subnautica-Below-Zero-v1.22.55047-full-apkvision.apk'},
+{name:'APKPure Store',cat:'WEBSITE',desc:'APKPure store portal',url:'https://apkpure.com/',download:'https://d.apkpure.com/custom/com.apkpure.aegon-latest.apk'},
+{name:'Mifirm Xiaomi',cat:'TOOL',desc:'Xiaomi, Redmi & POCO official firmware resource',url:'https://mifirm.net/',download:''},
+{name:'iCloud Web',cat:'WEBSITE',desc:'Apple iCloud Web access',url:'https://www.icloud.com/',download:''},
+{name:'MST Tool',cat:'TOOL',desc:'Google Drive shared technician package',url:'https://share.google/H43E44KlnU5GycxLG',download:''},
+{name:'Djkz Repairtool',cat:'TOOL',desc:'Google Drive shared tool package',url:'https://share.google/qjC0WLKAIDPwfRtAH',download:''},
+{name:'Palm Store',cat:'APPLICATION',desc:'Transsion Phoenix app store',url:'https://share.google/zVkrPBFede3MtGbV0e',download:'https://d.apkpure.com/b/APK/com.transsion.phoenix'},
+{name:'Orion',cat:'APPLICATION',desc:'Google Drive shared link',url:'https://share.google/DTC7c9UulBTA+DHRW',download:''},
+{name:'YouTube',cat:'WEBSITE',desc:'Watch and stream videos',url:'https://www.youtube.com/',download:''},
+{name:'Discord',cat:'APPLICATION',desc:'Chat and technical community',url:'https://discord.com/',download:''},
+{name:'WhatsApp',cat:'APPLICATION',desc:'Messaging and calls',url:'https://www.whatsapp.com/',download:''},
+{name:'CEIR Myanmar',cat:'CEIR',desc:'Official Myanmar CEIR IMEI & Tax registration portal',url:'https://www.ceir.gov.mm/',download:''}
+];
+
+function itemKey(x){ return String(x.name||'').toLowerCase()+'|'+String(x.url||'').toLowerCase()+'|'+String(x.cat||'').toLowerCase(); }
+
+function allItems(){
+  const merged=demo.map(d=>{
+    const matches=items.filter(x=>String(x.name||'').trim().toLowerCase()===d.name.trim().toLowerCase());
+    const saved=matches.length?matches[matches.length-1]:null;
+    return saved?{...d,...saved,url:saved.url||d.url,download:saved.download||d.download,desc:saved.desc||d.desc,cat:saved.cat||d.cat}:d;
+  });
+  const extras=items.filter(x=>!demo.some(d=>d.name.trim().toLowerCase()===String(x.name||'').trim().toLowerCase()));
+  return [...extras,...merged].filter(x=>!hiddenItems.includes(itemKey(x)));
+}
+
+function validUrl(s){
+  if(!s) return '';
+  if(String(s).startsWith('intent:') || String(s).startsWith('market:')) return s;
+  try{
+    let u=new URL(s);
+    return ['http:','https:'].includes(u.protocol)?u.href:'';
+  }catch(e){return '';}
+}
+
+/* Fallback Multi-Intent Handler for Android Browsers */
+window.handleIntentClick = function(event, actionName){
+  // Allow direct link action first
+  const intents = [
+    `intent:#Intent;action=${actionName};category=android.intent.category.DEFAULT;end`,
+    `intent:#Intent;action=${actionName};package=com.android.settings;end`,
+    `intent:#Intent;action=${actionName};end`
+  ];
+  
+  // Try intent trigger
+  let tried = 0;
+  function tryNext(){
+    if(tried < intents.length){
+      const current = intents[tried++];
+      window.location.href = current;
+    }
+  }
+  tryNext();
+};
+
+function render(){
+  const q=$('globalSearch').value.trim().toLowerCase(),cat=$('filter').value;
+  let list=allItems().filter(x=>(cat==='ALL'||x.cat===cat)&&(!q||(x.name+' '+x.cat+' '+(x.desc||'')).toLowerCase().includes(q)));
+  list.sort((a,b)=>Number(pinnedItems.includes(itemKey(b)))-Number(pinnedItems.includes(itemKey(a))));
+
+  $('items').innerHTML='';
+  list.forEach(x=>{
+    const card=document.createElement('article');
+    card.className='item'+(pinnedItems.includes(itemKey(x))?' pinned-item':'');
+    
+    const isOneSetting = String(x.name).toLowerCase().includes('one setting');
+    const top=document.createElement('div');
+    top.className='item-top';
+
+    const ico=document.createElement('div');
+    ico.className='itemicon';
+    ico.innerHTML = getAppSvg(x.name, x.cat);
+    top.appendChild(ico);
+
+    const info=document.createElement('div');
+    info.className='iteminfo';
+    const title=document.createElement('strong');
+    title.textContent=x.name;
+    info.appendChild(title);
+
+    const tag=document.createElement('span');
+    tag.className='tag';
+    tag.textContent=x.cat;
+    info.appendChild(tag);
+
+    if(pinnedItems.includes(itemKey(x))){
+      const badge=document.createElement('span');
+      badge.className='featured-badge';
+      badge.textContent='★ FEATURED';
+      info.appendChild(badge);
+    }
+
+    const desc=document.createElement('p');
+    desc.textContent=x.desc||'';
+    info.appendChild(desc);
+    top.appendChild(info);
+    card.appendChild(top);
+
+    const actions=document.createElement('div');
+    actions.className='itemactions';
+    const url=validUrl(x.url), dl=validUrl(x.download);
+
+    if(isOneSetting){
+      const a=document.createElement('a');
+      a.href='intent:#Intent;action=android.settings.SETTINGS;end';
+      a.className='btn-onesetting-card';
+      a.textContent='⚙ 1-Click Open Settings';
+      a.onclick=(e)=>handleIntentClick(e, 'android.settings.SETTINGS');
+      actions.appendChild(a);
+
+      const subBtn=document.createElement('button');
+      subBtn.type='button';
+      subBtn.textContent='Sub-menus ↗';
+      subBtn.onclick=()=>{$('settingModal').classList.add('active');};
+      actions.appendChild(subBtn);
+    } else {
+      if(dl){
+        const a=document.createElement('a');
+        a.href=dl;
+        a.target='_blank';
+        a.rel='noopener noreferrer';
+        a.className='btn-dl';
+        a.textContent='⬇ 1-Click Direct Download';
+        actions.appendChild(a);
+      }
+      if(url && url!==dl && !url.startsWith('intent:')){
+        const a=document.createElement('a');
+        a.href=url;
+        a.target='_blank';
+        a.rel='noopener noreferrer';
+        if(url.includes('play.google.com')){
+          a.className='btn-market';
+          a.textContent='Google Play ↗';
+        } else {
+          a.textContent='Website ↗';
+        }
+        actions.appendChild(a);
+      }
+    }
+
+    if(actions.children.length) card.appendChild(actions);
+    $('items').appendChild(card);
+  });
+  renderAdmin();
+}
+
+function save(){
+  try{localStorage.setItem(KEY,JSON.stringify(items))}catch(e){showToast('Browser storage is full.')}
+}
+
+function renderAdmin(){
+  if($('adminArea').classList.contains('hidden'))return;
+  $('adminItems').innerHTML='';
+  const aq=($('adminSearch')?.value||'').trim().toLowerCase(), ac=$('adminFilter')?.value||'ALL';
+  const current=allItems().filter(x=>(ac==='ALL'||x.cat===ac)&&(!aq||(x.name+' '+x.url+' '+(x.download||'')+' '+(x.desc||'')).toLowerCase().includes(aq)));
+
+  if(!current.length){
+    const empty=document.createElement('p');
+    empty.style.color='#a6c2bb';
+    empty.style.fontSize='12px';
+    empty.style.marginTop='8px';
+    empty.textContent='No items matching query.';
+    $('adminItems').appendChild(empty);
+    return;
+  }
+
+  current.forEach(x=>{
+    const d=document.createElement('div');
+    d.className='entryadmin';
+    const t=document.createElement('strong');
+    t.textContent=x.cat+' — '+x.name;
+    d.appendChild(t);
+
+    const edit=document.createElement('button');
+    edit.type='button';
+    edit.textContent='✏️ Edit';
+    edit.onclick=()=>{
+      $('itemCat').value=x.cat||'TOOL';
+      $('itemName').value=x.name||'';
+      $('itemDesc').value=x.desc||'';
+      $('itemUrl').value=x.url||'';
+      $('itemDownload').value=x.download||'';
+      editingName=x.name||'';
+      $('saveItem').textContent='Update Item';
+      $('itemName').focus();
+      $('adminContent').scrollIntoView({behavior:'smooth'});
+    };
+    d.appendChild(edit);
+
+    const pin=document.createElement('button');
+    pin.type='button';
+    pin.textContent=pinnedItems.includes(itemKey(x))?'★ Unpin':'☆ Pin Top';
+    pin.onclick=()=>{
+      const k=itemKey(x);
+      if(pinnedItems.includes(k)) pinnedItems=pinnedItems.filter(v=>v!==k);
+      else pinnedItems.push(k);
+      try{localStorage.setItem(PIN_KEY,JSON.stringify(pinnedItems))}catch(e){}
+      render();
+    };
+    d.appendChild(pin);
+
+    const del=document.createElement('button');
+    del.type='button';
+    del.className='del';
+    del.textContent='🗑 Delete';
+    del.onclick=()=>{
+      if(!confirm('Delete "'+x.name+'"?'))return;
+      const k=itemKey(x);
+      pinnedItems=pinnedItems.filter(v=>v!==k);
+      const idx=items.findIndex(y=>itemKey(y)===k);
+      if(idx>=0) items.splice(idx,1);
+      else if(!hiddenItems.includes(k)) hiddenItems.push(k);
+      save();
+      try{
+        localStorage.setItem(HIDDEN_KEY,JSON.stringify(hiddenItems));
+        localStorage.setItem(PIN_KEY,JSON.stringify(pinnedItems));
+      }catch(e){}
+      render();
+      showToast('Item deleted.');
+    };
+    d.appendChild(del);
+    $('adminItems').appendChild(d);
+  });
+}
+
+// Global Reset
+window.resetFilters=function(){
+  $('globalSearch').value='';
+  $('filter').value='ALL';
+  document.querySelectorAll('[data-store-cat]').forEach(x=>x.classList.toggle('active',x.dataset.storeCat==='ALL'));
+  render();
+};
+
+// Event Bindings
+$('openModalBtn').onclick=()=>{ $('settingModal').classList.add('active'); };
+$('closeSettingModal').onclick=()=>{ $('settingModal').classList.remove('active'); };
+$('settingModal').onclick=(e)=>{ if(e.target===$('settingModal')) $('settingModal').classList.remove('active'); };
+
+$('globalSearch').addEventListener('input',()=>{showAll=true;render()});
+$('focusSearch').onclick=()=>$('globalSearch').focus();
+$('viewToggle').onclick=()=>setLayoutView(document.body.classList.contains('pc-view')?'mobile':'pc');
+$('notifyBtn').onclick=()=>showToast('🔔 1-Click Direct Downloads & Android Settings Ready!');
+
+$('filter').addEventListener('change',()=>{
+  const val=$('filter').value;
+  document.querySelectorAll('[data-store-cat]').forEach(b=>b.classList.toggle('active',b.dataset.storeCat===val));
+  render();
+});
+
+document.querySelectorAll('[data-store-cat]').forEach(b=>{
+  b.addEventListener('click',()=>{
+    const c=b.dataset.storeCat;
+    $('filter').value=c;
+    document.querySelectorAll('[data-store-cat]').forEach(x=>x.classList.toggle('active',x===b));
+    render();
+  });
+});
+
+$('adminToggle').onclick=()=>{
+  const panel=$('adminContent');
+  const opening=panel.classList.contains('hidden');
+  panel.classList.toggle('hidden',!opening);
+  $('adminToggle').textContent=opening?'🔒 Close Admin':'🔐 Open Admin';
+  $('adminToggle').setAttribute('aria-expanded',String(opening));
+};
+
+$('adminSearch').addEventListener('input',renderAdmin);
+$('adminFilter').addEventListener('change',renderAdmin);
+
+$('login').onclick=()=>{
+  if($('username').value.trim()==='admin'&&$('password').value==='sankokoaung'){
+    $('loginArea').classList.add('hidden');
+    $('adminArea').classList.remove('hidden');
+    renderAdmin();
+    showToast('Admin logged in successfully!');
+  } else {
+    showToast('Incorrect username or password.');
+  }
+};
+
+$('logout').onclick=()=>{
+  $('adminArea').classList.add('hidden');
+  $('loginArea').classList.remove('hidden');
+  editingName='';
+  $('saveItem').textContent='Add Item';
+  $('username').value='';
+  $('password').value='';
+  showToast('Logged out.');
+};
+
+$('saveItem').onclick=()=>{
+  const name=$('itemName').value.trim();
+  if(!name){showToast('Please enter an item name');return;}
+  const u=$('itemUrl').value.trim(),d=$('itemDownload').value.trim();
+  const record={cat:$('itemCat').value,name,desc:$('itemDesc').value.trim(),url:validUrl(u),download:validUrl(d)};
+  const oldName=(editingName||name).trim().toLowerCase();
+
+  items=items.filter(x=>String(x.name||'').trim().toLowerCase()!==oldName);
+  items.unshift(record);
+
+  editingName='';
+  $('saveItem').textContent='Add Item';
+  save();
+  $('itemName').value='';$('itemDesc').value='';$('itemUrl').value='';$('itemDownload').value='';
+  render();
+  showToast('Saved: '+record.name);
+};
+
+function updateClock(){
+  const d=new Date();
+  $('clock').innerHTML='<b>'+d.toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit'})+'</b><small>'+d.toLocaleDateString('en-GB',{day:'2-digit',month:'short',year:'numeric'})+'</small>';
+}
+updateClock();
+setInterval(updateClock,1000);
+
+render();
+})();
+</script>
+</body>
+</html>
